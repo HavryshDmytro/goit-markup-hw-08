@@ -1,4 +1,4 @@
-.work {
+    .work {
     display: flex;
 }
 
@@ -28,4 +28,10 @@
     padding: 27px;
 
     color: var(--white-color);
+}
+
+.skills {
+        @include mq(notDesktop) {
+            display: none;
+        }
 }

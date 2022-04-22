@@ -1,19 +1,52 @@
 /* hero */
 .hero {
-    display: flex;
     background-color: var(--secondary-bg-color);
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
 
+    @include mq (desktop) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(..//images/Hero/hero.jpg);
+        url(..//images/Hero/mobile-hero.jpg);
+    
+        @include mq (retina) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(..//images/Hero/mobile-hero@2x.jpg);
+        }
+    
+        @include mq (tablet-only) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(..//images/Hero/tablet-hero.jpg);
+        
+        @include mq (retina) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(..//images/Hero/tablet-hero@2x.jpg);
+        }
+    }
+
+        @include mq (desktop) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(..//images/Hero/desktop-hero.jpg);
+        @include mq (retina) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(..//images/Hero/desktop-hero@2x.jpg);
+        }
+    }
+
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1600px 600px;
+    background-size: 400px 400px;
+
+    @include mq (tablet) {
+    background-size: 768px 400px;
+    }
+    @include mq (desktop) {
+        background-size: 1600px 600px;
+    }
+    
+    
 
     & .button {
         display: inline-block;
@@ -43,15 +76,15 @@
 }
 
 .hero-title {
-    width: 696px;
+    max-width: 360px;
     margin: 0px auto;
     margin-bottom: 30px;
 
     color: var(--white-color);
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;

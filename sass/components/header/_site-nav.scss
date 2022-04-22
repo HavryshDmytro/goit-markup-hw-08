@@ -1,6 +1,14 @@
 /* site nav */
 .site-nav {
     display: flex;
+
+    @include mq (tablet-only){
+    margin-right: 84px;
+    }
+
+    @include mq (desktop) {
+        margin-right: 305px;
+    }
 }
 
 .site-nav__link {

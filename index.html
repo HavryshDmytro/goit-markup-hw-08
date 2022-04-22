@@ -22,38 +22,62 @@
     <!-- Хедер -->
     <header class="header">
       <div class="container header-container">
-        <nav class="header__wrapper">
-          <a href="./index.html" class="logo logo__header">
-            <span class="logo__accent">Web</span>Studio
-          </a>
-          <ul class="site-nav list">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
+        <a href="./index.html" class="logo logo__header">
+          <span class="logo__accent">Web</span>Studio
+        </a>
+        <button
+          class="menu-btn"
+          type="button"
+          aria-label="Кнопка открытия меню"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg class="menu-btn__icon" width="40" height="40">
+            <use
+              class="menu-btn__icon-open"
+              href="./images/symbol-defs.svg#open-menu"
+            ></use>
+            <use
+              class="menu-btn__icon-close"
+              href="./images/symbol-defs.svg#close-menu"
+            ></use>
+          </svg>
+        </button>
+        <div class="header-menu">
+          <nav class="header__wrapper">
+            <ul class="site-nav list">
+              <li class="site-nav__item">
+                <a
+                  href="./index.html"
+                  class="site-nav__link site-nav__link--current"
+                  >Студия</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="auth-nav list">
+            <li class="auth-nav__item">
+              <a href="mailto:info@devstudio.com" class="auth-nav__link"
+                ><svg class="nav__icon" width="16px" height="12px">
+                  <use href="./images/symbol-defs.svg#mail"></use></svg
+                >info@devstudio.com</a
+              >
             </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакты</a>
+            <li class="auth-nav__item">
+              <a href="tel:+380961111111" class="auth-nav__link">
+                <svg class="nav__icon" width="10px" height="16px">
+                  <use href="./images/symbol-defs.svg#fone"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="auth-nav list">
-          <li class="auth-nav__item">
-            <a href="mailto:info@devstudio.com" class="auth-nav__link"
-              ><svg class="nav__icon" width="16px" height="12px">
-                <use href="./images/symbol-defs.svg#mail"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="auth-nav__item">
-            <a href="tel:+380961111111" class="auth-nav__link">
-              <svg class="nav__icon" width="10px" height="16px">
-                <use href="./images/symbol-defs.svg#fone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
 
@@ -79,7 +103,7 @@
               </div>
 
               <h3 class="title">Внимание к деталям</h3>
-              <p>
+              <p class="features-text">
                 Идейные соображения, а также начало повседневной работы по формированию позиции.
               </p>
             </li>
@@ -91,7 +115,7 @@
               </div>
 
               <h3 class="title">Пунктуальность</h3>
-              <p>
+              <p class="features-text">
                 Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
               </p>
             </li>
@@ -103,7 +127,7 @@
               </div>
 
               <h3 class="title">Планирование</h3>
-              <p>
+              <p class="features-text">
                 Равным образом консультация с широким активом в значительной степени обуславливает.
               </p>
             </li>
@@ -115,20 +139,21 @@
               </div>
 
               <h3 class="title">Современные технологии</h3>
-              <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+              <p class="features-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
             </li>
           </ul>
         </div>
       </section>
 
       <!-- Секция Чем мы занимаемся -->
-      <section class="section">
+      <section class="section skills">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="work list">
             <li class="work-item">
               <img
-                src="./images/work_1.jpg"
+                srcset="./images/work/work_1.jpg 1x, ./images/work/work_1@2x.jpg 2x"
+                src="./images/work/work_1.jpg"
                 alt="программный код на стационарном компьютере"
                 width="370"
                 height="294"
@@ -137,7 +162,8 @@
             </li>
             <li class="work-item">
               <img
-                src="./images/work_2.jpg"
+                srcset="./images/work/work_2.jpg 1x, ./images/work/work_2@2x.jpg 2x"
+                src="./images/work/work_2.jpg"
                 alt="оформление приложения на ноутбуке и смартфоне"
                 width="370"
                 height="294"
@@ -146,7 +172,8 @@
             </li>
             <li class="work-item">
               <img
-                src="./images/work_3.jpg"
+                srcset="./images/work/work_3.jpg 1x, ./images/work/work_3@2x.jpg 2x"
+                src="./images/work/work_3.jpg"
                 alt="стилизация цвета на планшете"
                 width="370"
                 height="294"
@@ -158,7 +185,7 @@
       </section>
 
       <!-- Секция команда -->
-      <section class="section team">
+      <!-- <section class="section team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
 
@@ -321,10 +348,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- Секция клиенты  -->
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="clients-list list">
@@ -366,11 +393,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- Футер -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-container">
         <div class="contact">
           <a href="./index.html" class="logo logo-footer">
@@ -439,10 +466,10 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Модальное окно -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="close">
           <svg width="30" height="30" class="close-svg">
@@ -493,7 +520,89 @@
           <button class="modal-button" type="submit">Отправить</button>
         </form>
       </div>
-    </div>
-    <script src="./js/modal.js"></script>
+    </div> -->
+    
+    <!-- Мобильное меню -->
+
+        <div class="mobile-overlay" data-menu>
+            <div class="mobile-menu">
+            <nav class="mobile-nav">
+            <ul class="mobile-nav__list list">
+              <li class="mobile-nav__item">
+                <a
+                  href="./index.html"
+                  class="mobile-nav__link mobile-nav__link--current"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-nav__item">
+                <a href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a href=" " class="mobile-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="mobile-contacts list">
+             <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__tell">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__mail"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+         <ul class="socials list">
+          <li class="socials__item">
+            <a
+              class="socials__link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </li>
+
+          <li class="socials__item">
+            <a
+              class="socials__link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              >Twitter</a
+            >
+          </li>
+                    <li class="socials__item">
+            <a
+              class="socials__link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+          </li>
+
+          <li class="socials__item">
+            <a
+              class="socials__link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+          </div>
+        </div>
+      </div>
+      <script src="./js/modal.js"></script>
+      <script src="./js/menu.js"></script>
+
+      
   </body>
 </html>

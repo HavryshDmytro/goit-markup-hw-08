@@ -1,6 +1,9 @@
 .auth-nav {
-    display: flex;
     margin-left: auto;
+
+    @include mq (desktop) {
+        display: flex;
+    }
 }
 
 .auth-nav__link {
@@ -9,7 +12,13 @@
 }
 
 .auth-nav__item:not(:last-child) {
-    margin-right: 50px;
+    @include mq (tablet-only) {
+        margin-bottom: 10px;
+    }
+
+    @include mq (desktop) {
+        margin-right: 30px;
+     }
 }
 
 .nav__icon {

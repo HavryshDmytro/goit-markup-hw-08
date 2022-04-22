@@ -1,21 +1,39 @@
 /* header */
 .header {
+    position: relative;
     border-bottom: 1px solid #ececec;
+}
+
+.header-menu {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center; 
+    }
 }
 
 .header-container {
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+    justify-content: center;
+    }
+    min-height: 60px;
 }
 
 .header__wrapper {
     display: flex;
-    align-items: center;
+    align-items: center;   
 }
 
 
-
 @import "./logo";
+
+@import "./menu-btn";
+
+@import "./menu";
 
 @import "./site-nav";
 
