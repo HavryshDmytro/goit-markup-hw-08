@@ -3,13 +3,25 @@ footer {
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
+    @include mq (desktop){
+        display: flex;
+    align-items: baseline;}
+
 }
 
+
 .contact {
-    margin-right: 70px;
-    width: 231px;
+    text-align: center;
+    @include mq (mobile-only){
+        margin-bottom: 60px;
+    }
+    
+    @include mq (tablet-only){
+        margin-right: 165px;
+    }
+    @include mq (desktop){
+        margin-right: 70px;
+    }
 }
 
 .footer {
@@ -40,11 +52,23 @@ footer {
 }
 
 .footer-list:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .join-social {
-    margin-right: 93px;
+    @include mq (mobile-only) {
+        margin-bottom: 60px;
+    }
+
+    @include mq (notDesktop){
+        text-align: center;
+    }
+    
+
+    @include mq (desktop){
+        margin-right: 93px;
+    }
+    
 }
 
 .join {
@@ -76,5 +100,24 @@ footer {
     &:hover,
     &:focus {
         background-color: var(--accent-color);
+    }
+}
+
+.mailing {
+    @include mq (notDesktop){
+    text-align: center;
+    }
+}
+
+.footer-tablet {
+    @include mq (tablet){
+        display: flex;
+        justify-content: center;
+    }
+    @include mq (tablet-only) {
+        margin-bottom: 60px;
+    }
+    @include mq (desktop){
+        align-items: baseline;
     }
 }

@@ -22,11 +22,12 @@
     background-size: contain;
     content: '';
     display: inline-block;
-    width: 16px;
-    height: 15px;
+    min-width: 16px;
+    min-height: 15px;
     margin-right: 8px;
     border-radius: 2px;
-    border: 2px solid var(--title-text-color)
+    border: 2px solid var(--title-text-color);
+    
 }
 
 .checkbox-label {
@@ -39,6 +40,7 @@
 
 .custom-icon {
     position: absolute;
-    top: -2px;
-    left: -2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

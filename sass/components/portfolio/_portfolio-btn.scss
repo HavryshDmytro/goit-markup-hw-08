@@ -1,6 +1,11 @@
 .portfolio-button {
     display: flex;
-    justify-content: center;
+   
+    flex-wrap: wrap;
+    @include mq (tablet){
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
 
     & .button {
         border: none;
@@ -32,10 +37,22 @@
     }
 
     &.list {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
+        @include mq (tablet){
+            margin-bottom: 30px;
+        }
+        @include mq (desktop) {
+            margin-bottom: 50px;
+        }
     }
 }
 
-.button-item:not(:last-child) {
-    margin-right: 8px;
+.button-item {
+    @include mq (mobile-only){
+        margin-bottom: 15px;
+    }
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
 }
+

@@ -1,9 +1,6 @@
 @import "./portfolio-btn";
 
 .portfolio-project {
-    display: flex;
-    flex-wrap: wrap;
-
     & .title {
         color: var(--title-text-color);
     
@@ -20,25 +17,35 @@
         font-size: 16px;
         line-height: 1.88;
     }
+    @include mq (tablet){
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    }
 }
 
 .portfolio-item {
-    width: calc((100% - 60px) / 3);
-    margin-right: 30px;
-    margin-bottom: 30px;
-
-    &:nth-child(3n) {
-        margin-right: 0px;
+    max-width: 450px;
+    @include mq (tablet){
+        width: calc((100% - 60px) / 2);
+        margin: 15px;
     }
-    
-    &:nth-last-child(-n + 3) {
-        margin-bottom: 0px;
+    @include mq (desktop){
+    width: calc((100% - 90px) / 3);
+    }
+}
+
+
+.portfolio-item:not(:last-child) {
+    @include mq (mobile-only){
+    margin-bottom: 30px;
     }
 }
 
 .card-thumb {
     position: relative;
     overflow: hidden;
+
 }
 
 .services {
@@ -61,12 +68,17 @@
 }
 
 .portfolio-text {
+    width: 100%;
     border: 1px solid #eeeeee;
     border-top: none;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
+
+    @include mq (tablet){
+        flex-grow: 1;
+    }
 }
 
 .portfolio-link {
@@ -84,5 +96,10 @@
     &:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    @include mq (tablet){
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 }

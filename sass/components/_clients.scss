@@ -1,10 +1,29 @@
 .clients-list {
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    @include mq (desktop){
+        flex-wrap: nowrap;
+    }
 }
 
-.clients:not(:last-child) {
-    margin-right: 30px;
+.clients {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+
+    @include mq (tablet){
+    width: calc((100% - 90px) / 3);
+    }
+
+    @include mq (desktop) {
+        width: calc((100% - 180px) / 6);
+    }
 }
+
+// .clients:not(:last-child) {
+//     margin-right: 30px;
+// }
 
 .clients-page {
     fill: var(--social-icon);
@@ -13,7 +32,6 @@
     align-items: center;
     justify-content: center;
 
-    width: 170px;
     height: 92px;
     border: 1px solid var(--social-icon);
     border-radius: 4px;

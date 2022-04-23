@@ -11,10 +11,6 @@
 
 }
 
-.features-section {
-    padding-bottom: 0px;
-}
-
 .features {
     & .title {
         font-weight: 700;
@@ -39,7 +35,9 @@
 }
 
 .features-item:not(:last-child) {
+    @include mq (mobile-only){
     margin-bottom: 30px;
+    }
 
     @include mq (desktop){
         margin-right: 30px;
