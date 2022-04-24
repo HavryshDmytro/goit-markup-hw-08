@@ -21,6 +21,7 @@ footer {
     }
     @include mq (desktop){
         margin-right: 70px;
+        text-align: start;
     }
 }
 

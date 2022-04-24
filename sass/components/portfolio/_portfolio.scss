@@ -61,7 +61,13 @@
     color: var(--white-color);
     background-color: rgba(33, 150, 243, 0.9);
     transition: transform var(--animation);
+
+    @media screen and (min-width: 320px) and (max-width: 390px){
+        font-size: 14px;
+        padding-top: 32px;
+    }
 }
+
 
 .portfolio-title {
     margin-bottom: 4px;
